@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cursos de Informática</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-image: url('Fondo.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .hidden-tab { display: none; }
+
+    .imagen-giratoria {
+      width: 120px;
+      height: 120px;
+      animation: girar 4s linear infinite;
+      cursor: pointer;
+    }
+
+    .pausada {
+      animation-play-state: paused;
+    }
+
+    @keyframes girar {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+  .hidden-tab {
+    display: none;
+  }
+.anuarioo{
+  background-color: rgb(33, 67, 239);
+  text-decoration: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+  </style>
+</head>
+<body class="p-8 text-gray-800">
+
+  <div class="max-w-6xl mx-auto bg-white bg-opacity-90 rounded-3xl shadow-xl p-8">
+    <h1 class="text-3xl font-bold text-center text-indigo-800 mb-8">Cursos de Informática</h1>
+
+<!-- Menú de navegación -->
+<div class="flex justify-center gap-4 mb-6">
+  <button onclick="mostrarSeccion('inicio')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Inicio</button>
+  <button onclick="mostrarSeccion('cursos')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Cursos</button>
+  <button onclick="mostrarSeccion('acerca')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Acerca de mí</button>
+  <button onclick="mostrarSeccion('redes')" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Mis redes</button>
+  <a href="Anuario 2025.html" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"">Anuario 2025</a>
+</div>
+
+<!-- Sección Inicio (visible al cargar) -->
+<div id="inicio" class="text-center mb-8">
+  <img src="me.jpg" alt="Mi Foto" class="mx-auto w-32 h-32 rounded-full mb-4 border-4 border-blue-400"/>
+  <h2 class="text-xl font-bold text-indigo-800">Suany Bardales</h2>
+  <p class="text-sm text-gray-600">Estudiante de 12 BTP Informática </br> "2" </p>
+</div>
+
+<!-- Sección Cursos (oculta al inicio) -->
+<div id="cursos" class="hidden-tab mb-8">
+  <div id="vista-cursos">
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Curso 1 -->
+        <div class="bg-blue-100 p-6 rounded-xl shadow-md">
+          <div class="text-4xl text-blue-600 mb-4 text-center">💻</div>
+          <h2 class="text-lg font-bold mb-2 text-blue-900">Programación</h2>
+          <p class="text-sm mb-4">Aprende a programar desde cero con Python, Java o C#.</p>
+          <div class="flex justify-center">
+            <button onclick="mostrarInfo('programacion')" class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm hover:bg-blue-700">Información</button>
+          </div>
+        </div>
+
+        <!-- Curso 2 -->
+        <div class="bg-purple-100 p-6 rounded-xl shadow-md">
+          <div class="text-4xl text-purple-600 mb-4 text-center">📝</div>
+          <h2 class="text-lg font-bold mb-2 text-purple-900">Ofimática</h2>
+          <p class="text-sm mb-4">Aprende a dominar Word, Excel y PowerPoint fácilmente.</p>
+          <div class="flex justify-center">
+            <button onclick="mostrarInfo('ofimatica')" class="bg-purple-600 text-white px-4 py-2 rounded-full text-sm hover:bg-purple-700">Información</button>
+          </div>
+        </div>
+
+        <!-- Curso 3 -->
+        <div class="bg-pink-100 p-6 rounded-xl shadow-md">
+          <div class="text-4xl text-pink-600 mb-4 text-center">🌐</div>
+          <h2 class="text-lg font-bold mb-2 text-pink-900">Redes</h2>
+          <p class="text-sm mb-4">Configura redes, routers y aprende fundamentos de conectividad.</p>
+          <div class="flex justify-center">
+            <button onclick="mostrarInfo('redes')" class="bg-pink-600 text-white px-4 py-2 rounded-full text-sm hover:bg-pink-700">Información</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Detalles -->
+    <div id="detalles" class="hidden-tab mt-10">
+      <button onclick="volver()" class="mb-6 text-indigo-700 underline text-sm">← Volver a los cursos</button>
+
+      <!-- Info Programación -->
+      <div id="info-programacion" class="hidden-tab">
+        <h2 class="text-2xl font-bold text-blue-800 mb-2">💻 Aprende a programar desde cero</h2>
+        <p>Aprende desde lo más básico hasta programación intermedia con Python, Java o C#. Incluye ejercicios prácticos y proyectos reales.</p><br>
+        <p>En esta guía de cómo aprender sobre programación queremos darte las herramientas e ideas necesarias para que puedas empezar tu camino en este maravilloso mundo, evites cometer los mismos errores que muchos de nosotros al iniciar, pierdas el miedo y descubras lo que mejor se acople a ti.</p>
+        <p>El recorrido inicia desde los conceptos básicos, pasando por líneas de código y lenguajes, hasta los cursos que puedes tomar para profundizar sobre el tema. ¡Iniciemos!</p><br>
+        <p>Aprende lo básico sobre algoritmos y resolución de problemas<br>
+        Un algoritmo es un conjunto de pasos ordenados que se siguen para completar una tarea específica. Los algoritmos son esenciales en la programación para descomponer problemas complejos en pasos más manejables, porque determinan todo el diseño del programa y los códigos de programación para que se ejecuten.</p><br>
+        <img src="progra.jpg" class="imagen-giratoria" alt="Programación" onclick="toggle(this)">
+      </div>
+
+      <!-- Info Ofimática -->
+      <div id="info-ofimatica" class="hidden-tab">
+        <h2 class="text-2xl font-bold text-purple-800 mb-2">📝 Curso de Ofimática</h2>
+        <p>Aprende Word, Excel y PowerPoint desde cero. Curso ideal para el trabajo y los estudios. Incluye plantillas y automatización básica.</p><br>
+        <p>Este curso de ofimática te capacita para crear documentos profesionales en Word, usar fórmulas y gráficos en Excel, y realizar presentaciones efectivas en PowerPoint.</p><br>
+        <p>También aprenderás sobre Google Docs, hojas de cálculo en la nube, formatos PDF y cómo optimizar tu productividad en entornos de oficina.</p><br>
+        <img src="ofimatica.jpg" class="imagen-giratoria" alt="Ofimática" onclick="toggle(this)">
+      </div>
+
+      <!-- Info Redes -->
+      <div id="info-redes" class="hidden-tab">
+        <h2 class="text-2xl font-bold text-pink-800 mb-2">🌐 Curso de Redes</h2>
+        <p>Fundamentos de redes, configuración de routers y switches, tipos de cables, y protocolos. Prácticas con simuladores de red.</p><br>
+        <p>Conocerás los conceptos de LAN, WAN, direccionamiento IP, máscaras de subred y seguridad básica en redes.</p><br>
+        <p>Este curso es ideal si quieres trabajar en soporte técnico, telecomunicaciones o simplemente entender cómo funciona Internet.</p><br>
+        <img src="redes.jpg" class="imagen-giratoria" alt="Redes" onclick="toggle(this)">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggle(img) {
+      img.classList.toggle("pausada");
+    }
+
+    function mostrarInfo(curso) {
+      document.getElementById("vista-cursos").classList.add("hidden-tab");
+      document.getElementById("detalles").classList.remove("hidden-tab");
+      document.getElementById("info-programacion").classList.add("hidden-tab");
+      document.getElementById("info-ofimatica").classList.add("hidden-tab");
+      document.getElementById("info-redes").classList.add("hidden-tab");
+
+      if (curso === "programacion") {
+        document.getElementById("info-programacion").classList.remove("hidden-tab");
+      } else if (curso === "ofimatica") {
+        document.getElementById("info-ofimatica").classList.remove("hidden-tab");
+      } else if (curso === "redes") {
+        document.getElementById("info-redes").classList.remove("hidden-tab");
+      }
+    }
+
+    function volver() {
+      document.getElementById("vista-cursos").classList.remove("hidden-tab");
+      document.getElementById("detalles").classList.add("hidden-tab");
+    }
+  </script>
+
+<!-- Sección Acerca de mí -->
+<div id="acerca" class="hidden-tab mb-8">
+  <h2 class="text-xl font-bold text-indigo-800 mb-4">Acerca de mí</h2>
+  <p>¡Hola! Soy Suany Daniela Bardales Campos, Estudiante de 12 informática con pasión por la enseñanza. Me gusta la programación, la ofimática y las redes. Me siento afortunada de brindarte mis cursos sobre estas en tres áreas clave: Programación, Ofimática y Redes, hermosas materias muy fundamentales de la Carrera de Informatica.Mi objetivo es ayudarte a desarrollar habilidades reales que te abran puertas en el mundo laboral y tecnológico.</br>        ¡Aprende conmigo y transforma tu futuro digital!</p>
+</div>
+
+<!-- Sección Mis redes -->
+<div id="redes" class="hidden-tab text-center mb-8">
+  <h2 class="text-xl font-bold text-indigo-800 mb-4">Encuentrame en:</h2>
+
+  <div class="mb-6">
+    <p class="mb-2">Instagram:</p>
+    <a href="https://www.instagram.com/dany_bardales/" target="_blank" class="inline-block">
+      <img src="instagram.jpg" alt="Instagram" class="rounded-full w-20 h-20 mx-auto mb-2">
+      <p>@dany_bardales</p>
+    </a>
+  </div>
+
+  <div>
+    <p class="mb-2">TikTok:</p>
+    <a href="https://www.tiktok.com/@suanybardales" target="_blank" class="inline-block">
+      <img src="tik tok.jpg" alt="TikTok" class="rounded-full w-20 h-20 mx-auto mb-2">
+      <p>@suanybardales</p>
+    </a>
+  </div> 
+
+</br><h2 class="text-xl font-bold text-indigo-800 mb-4">Para mayor información.</h2>
+</div>
+
+<!-- Anuario -->
+<div id="anuario" class="hidden-tab mb-8">
+
+
+
+
+<script>
+  function mostrarSeccion(id) {
+    const secciones = ['inicio', 'cursos', 'acerca', 'redes', 'anuario'];
+    secciones.forEach(s => {
+      const el = document.getElementById(s);
+      if (el) el.classList.add("hidden-tab");
+    });
+    const mostrar = document.getElementById(id);
+    if (mostrar) mostrar.classList.remove("hidden-tab");
+  }
+</script>
+
+  <script>
+    function mostrar(id) {
+      const secciones = document.querySelectorAll('.card');
+      secciones.forEach(seccion => {
+        seccion.classList.remove('visible');
+      });
+      document.getElementById(id).classList.add('visible');
+    }
+  </script>
+</body>
+</html>
